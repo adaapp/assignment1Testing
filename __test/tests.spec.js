@@ -96,3 +96,9 @@ test('append_value test 1 works',()=>{
 test('append_value test 2 works',()=>{
   expect(append_value('20', '30', '+', true)).toBe("20 + 30");
 })
+
+test('append_value test 3 works',()=>{
+  expect(append_value('20', '30', '+')).toBe("20+30");
+})
+
+test('')
