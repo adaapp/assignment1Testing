@@ -32,3 +32,7 @@ test('calculation object exists', () => {
   expect(calculation).toBeDefined;
 });
 
+test('calculation object has an expression array', () => {
+  expect(calculation._expression).toBeDefined;
+});
+
