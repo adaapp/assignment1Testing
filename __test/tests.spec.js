@@ -36,3 +36,8 @@ test('calculation object has an expression array', () => {
   expect(calculation._expression).toBeDefined;
 });
 
+test('expression array can be manipulated via testing', () => {
+  calculation._expression = ['1']
+  expect(calculation._expression).toBeDefined;
+  expect(calculation._expression).toEqual(['1'])
+});
