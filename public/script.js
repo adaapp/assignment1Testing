@@ -94,3 +94,19 @@ for(let i = 0; i < buttons.length; i++) { //loop through each 'button' instance
 //once the oload event has fired, execute any requested functions
 window.onload = () => {
 };
+
+
+// ignore this Mike!
+module.exports = {
+  screen,
+  calculation,
+  append_value,
+  valid_leadingzeros,
+  valid_decimals,
+  trim_invalid_numerics,
+  control_pressed,
+  digit_pressed,
+  operator_pressed,
+  evaluate
+  }
+// Thanks!
