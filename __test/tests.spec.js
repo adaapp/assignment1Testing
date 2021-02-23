@@ -5,6 +5,7 @@ const {evaluate,calculation} = require('../public/script.js')
  
   calculation
       - push(exp) (adds push to expression)
+      - pop() (removes last value from the array)
   append_value 
 
   valid_leadingzeros 
@@ -46,4 +47,10 @@ test('calc push should add inputs to an array', ()=> {
   calculation._expression = []
   calculation.push('1')
   expect(calculation._expression).toEqual(['1'])
+})
+
+test('calc pop should remove input from array', ()=> {
+  calculation._expression = ['5','*','8']
+  calculation.pop()
+  expect(calculation._expression).toEqual(['5','*'])
 })
