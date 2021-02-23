@@ -1,4 +1,4 @@
-const {evaluate,calculation} = require('../public/script.js')
+const {evaluate,calculation,append_value} = require('../public/script.js')
 
 /* Things we can test, i.e. module exports from script.js
   screen
@@ -9,9 +9,9 @@ const {evaluate,calculation} = require('../public/script.js')
       - last() (returns the last value from the array)
       - clear() (clears the array)
       - debug() (console logs the array)
-      - SKIP expression() returns array with apprend value
+      - expression() returns array with apprend value
   append_value 
-
+      "This function expects four arguments (the last ‘spacer' is optional and defaults to false of not provided). The result is based on the original value being updated so that it includes the appended value prefixed with the glue value; if the spacer is true it also includes a “ “ character. If the original value is blank the returned string only contains the appended value; example tests are shown below."
   valid_leadingzeros 
   
   valid_decimals 
@@ -76,4 +76,19 @@ test('debug function should console log the exp array contents', ()=> {
   calculation._expression = ['7']
   calculation.debug()
   expect(console.log).toHaveBeenCalledWith(['7'])
+})
+
+test('calc expression function returns exp as a nicely spaced object ', ()=> {
+  calculation._expression = ['7','*','5','+','4']
+  expect(calculation.expression()).toEqual('7 * 5 + 4')
+})
+
+
+// append_value function works
+test('append_value function exists',()=>{
+  expect(append_value()).toBeDefined;
+})
+
+test('append_value test 1 works',()=>{
+  expect(append_value('20', '30', '+', false)).toBe("20+30");
 })
