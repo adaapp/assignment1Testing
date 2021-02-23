@@ -8,6 +8,8 @@ const {evaluate,calculation} = require('../public/script.js')
       - pop() (removes last value from the array)
       - last() (returns the last value from the array)
       - clear() (clears the array)
+      - debug() (console logs the array)
+      - SKIP expression() returns array with apprend value
   append_value 
 
   valid_leadingzeros 
