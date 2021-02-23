@@ -41,3 +41,9 @@ test('expression array can be manipulated via testing', () => {
   expect(calculation._expression).toBeDefined;
   expect(calculation._expression).toEqual(['1'])
 });
+
+test('calc push should add inputs to an array', ()=> {
+  calculation._expression = []
+  calculation.push('1')
+  expect(calculation._expression).toEqual(['1'])
+})
