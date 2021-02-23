@@ -92,3 +92,7 @@ test('append_value function exists',()=>{
 test('append_value test 1 works',()=>{
   expect(append_value('20', '30', '+', false)).toBe("20+30");
 })
+
+test('append_value test 2 works',()=>{
+  expect(append_value('20', '30', '+', true)).toBe("20 + 30");
+})
