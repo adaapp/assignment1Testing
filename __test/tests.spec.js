@@ -113,4 +113,7 @@ test('append_value test 6 works',()=>{
   expect(append_value('hello', 'developer', 'there', true)).toBe("hello there developer");
 })
 
+test('append_value test 7 works',()=>{
+  expect(append_value('', '', 'alpha', true)).toBe("")
+})
 
