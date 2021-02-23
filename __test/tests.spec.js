@@ -6,7 +6,8 @@ const {evaluate,calculation} = require('../public/script.js')
   calculation
       - push(exp) (adds push to expression)
       - pop() (removes last value from the array)
-      - last (returns the last value from the array)
+      - last() (returns the last value from the array)
+      - clear() (clears the array)
   append_value 
 
   valid_leadingzeros 
@@ -62,4 +63,15 @@ test('calc last returns the last item in the array', ()=> {
   expect(calculation._expression).toEqual(['2','+','8','*'])
 })
 
+test('calc clear should remove all the objects in the array', ()=> {
+  calculation._expression = ['3','/','5','+','1']
+  calculation.clear()
+  expect(calculation._expression).toEqual([])
+})
 
+test('debug function should console log the exp array contents', ()=> {
+  // this may not work
+  calculation._expression = ['7']
+  calculation.debug()
+  expect(console.log).toHaveBeenCalledWith(['7'])
+})
